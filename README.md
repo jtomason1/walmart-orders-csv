@@ -12,11 +12,9 @@ Input the following:
 
 ```
 date = Array.from(document.getElementsByClassName("print-bill-date")).map((v)=>{return v.textContent})[0].replace(" order","").replace(" purchase","")
-document.querySelectorAll('div[data-testid=productName]');
 items = Array.from(document.querySelectorAll('div[data-testid=productName]')).map((e)=>{
    return e.textContent;
 });
-document.querySelectorAll('div[class="ml-auto"]')
 prices = Array.from(document.querySelectorAll('div[class="ml-auto"]')).map((e)=>{
    return e.firstChild.firstChild.textContent.split("$")[1];
 });
